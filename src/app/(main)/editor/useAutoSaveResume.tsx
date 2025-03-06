@@ -100,7 +100,7 @@
 //   };
 // }
 import useDebounce from "@/hooks/useDebounce";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { saveResume } from "./action";
 import { Button } from "@/components/ui/button";
