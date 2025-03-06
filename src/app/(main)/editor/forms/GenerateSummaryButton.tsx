@@ -3,6 +3,7 @@ import { useToast } from "@/hooks/use-toast";
 import { WandSparklesIcon } from "lucide-react";
 import { useState } from "react";
 import { generateSummary } from "./action";
+import { ResumeVlaues } from "@/lib/validation";
 
 interface GenerateSummaryButtonProps {
   resumeData: ResumeVlaues;

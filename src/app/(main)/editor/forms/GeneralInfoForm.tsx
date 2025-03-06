@@ -25,6 +25,7 @@ export default function GeneralInfoForm({
       description: resumeData.description || "",
     },
   });
+
   useEffect(() => {
     const { unsubscribe } = form.watch(async (values) => {
       const isValid = await form.trigger();
