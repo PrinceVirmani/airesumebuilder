@@ -21,8 +21,8 @@ export default function ResumePreviewSection({
     >
       <div className="absolute top-1 left-1 flex flex-none flex-col gap-3 opacity-50 transition-opacity group-hover:opacity-100 lg:top-3 lg:left-3 lg:opacity-100">
         <ColorPicker
-          color={resumeData.colorHex}
-          onChange={(color) =>
+          color={resumeData?.colorHex} // Ensuring property exists
+          onChange={(color: { hex: string }) =>
             setResumeData({ ...resumeData, colorHex: color.hex })
           }
         />
