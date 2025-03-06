@@ -109,7 +109,7 @@ import { ResumeVlaues } from "@/lib/validation";
 import { fileReplacer } from "@/lib/utils";
 
 export default function useAutoSaveResume(resumeData: ResumeVlaues) {
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const { toast } = useToast();
   const debouncedResumeData = useDebounce(resumeData, 1500);
 

@@ -1,9 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import GeneralInfoForm from "./forms/GeneralInfoForm";
-import PersonalInfoForm from "./forms/PersonalInforForm";
 import { useSearchParams } from "next/navigation";
 import { steps } from "./steps";
 import Breadcrumps from "./Breadcrumps";
@@ -11,7 +7,7 @@ import Footer from "./Footer";
 import { useState } from "react";
 import { ResumeVlaues } from "@/lib/validation";
 import ResumePreviewSection from "./ResumePreviewSection";
-import { cn, mapToResumeValues } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import useUnloadWarning from "@/hooks/useUnloadWarning";
 import useAutoSaveResume from "./useAutoSaveResume";
 import { ResumeServerData } from "@/lib/types";
