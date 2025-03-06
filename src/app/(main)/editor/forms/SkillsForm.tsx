@@ -21,7 +21,7 @@ export default function SkillsForm({
   const form = useForm<SkillsValues>({
     resolver: zodResolver(skillsSchema),
     defaultValues: {
-      skills: resumeData.skills || [],
+      skills: resumeData.skills ?? [],
     },
   });
 
