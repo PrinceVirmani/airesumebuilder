@@ -7,11 +7,11 @@ import {
 // import { Popover, PopoverTrigger } from "@radix-ui/react-popover";
 import { PaletteIcon } from "lucide-react";
 import { useState } from "react";
-import { Color, TwitterPicker } from "react-color";
+import { Color, ColorResult, TwitterPicker } from "react-color";
 
 interface ColorPickerProps {
   color: Color | undefined;
-  onChange: ColorChangeHandler;
+  onChange: (color: ColorResult) => void;
 }
 
 export default function ColorPicker({ color, onChange }: ColorPickerProps) {
