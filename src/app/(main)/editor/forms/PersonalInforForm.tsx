@@ -238,38 +238,41 @@ export default function PersonalInfoForm({
           <FormField
             control={form.control}
             name="photo"
-            render={({ field: { value: _value, ...fieldValues } }) => (
-              <FormItem>
-                <FormLabel>Your photo</FormLabel>
-                <div className="flex items-center gap-2">
-                  <FormControl>
-                    <Input
-                      {...fieldValues}
-                      type="file"
-                      accept="image/*"
-                      onChange={(e) => {
-                        const file = e.target.files?.[0];
-                        fieldValues.onChange(file);
+            render={({ field }) => {
+              const { value, ...fieldValues } = field;
+              return (
+                <FormItem>
+                  <FormLabel>Your photo</FormLabel>
+                  <div className="flex items-center gap-2">
+                    <FormControl>
+                      <Input
+                        {...fieldValues}
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0];
+                          fieldValues.onChange(file);
+                        }}
+                        ref={photoInputRef}
+                      />
+                    </FormControl>
+                    <Button
+                      variant="secondary"
+                      type="button"
+                      onClick={() => {
+                        fieldValues.onChange(null);
+                        if (photoInputRef.current) {
+                          photoInputRef.current.value = "";
+                        }
                       }}
-                      ref={photoInputRef}
-                    />
-                  </FormControl>
-                  <Button
-                    variant="secondary"
-                    type="button"
-                    onClick={() => {
-                      fieldValues.onChange(null);
-                      if (photoInputRef.current) {
-                        photoInputRef.current.value = "";
-                      }
-                    }}
-                  >
-                    Remove
-                  </Button>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
+                    >
+                      Remove
+                    </Button>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              );
+            }}
           />
           <div className="grid grid-cols-2 gap-3">
             <FormField
