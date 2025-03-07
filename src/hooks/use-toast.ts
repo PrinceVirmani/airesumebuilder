@@ -18,7 +18,8 @@ function toast(props: ToastProps) {
 
     const toastFn = variant === "destructive" ? sonnerToast.error : sonnerToast;
 
-    const id = toastFn(title || "", {
+    // If no title is provided, use a space character to satisfy the non-empty string requirement
+    const id = toastFn(title || " ", {
         description,
         duration,
         ...rest,
