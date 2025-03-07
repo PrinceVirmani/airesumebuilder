@@ -238,7 +238,7 @@ export default function PersonalInfoForm({
           <FormField
             control={form.control}
             name="photo"
-            render={({ field: { value, ...fieldValues } }) => (
+            render={({ field: { value: _value, ...fieldValues } }) => (
               <FormItem>
                 <FormLabel>Your photo</FormLabel>
                 <div className="flex items-center gap-2">
