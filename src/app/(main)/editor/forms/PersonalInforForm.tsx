@@ -239,7 +239,7 @@ export default function PersonalInfoForm({
             control={form.control}
             name="photo"
             render={({ field }) => {
-              const { value, ...fieldValues } = field;
+              const { value: _, ...fieldValues } = field;
               return (
                 <FormItem>
                   <FormLabel>Your photo</FormLabel>
